@@ -1,3 +1,116 @@
-body{
-    background-color: aqua;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 120vh;
+}
+
+.wrapper-header {
+  height: 500px;
+  background-image: linear-gradient(rgba(66, 78, 91, 0.5), hsla(0, 0%, 100%, 0)),
+    url(https://www.tecnocasa.tn/img/home-hero/tn/tecnocasa/residential/mobile_4.jpg);
+  background-size: contain;
+  position: relative;
+}
+
+.wrapper-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.list ul {
+  display: flex;
+  list-style: none;
+  gap: 0.7rem;
+  color: white;
+}
+.list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.list ul li p {
+  font-size: 0.99rem;
+}
+
+.logo {
+  color: white;
+}
+.bienvenu {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputAcc {
+  height: 20px;
+  width: 100%;
+  border-radius: 17px;
+  border: none;
+  padding: 1rem;
+  font-size: 0.8em;
+}
+.input-icon {
+  border-radius: 17px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding-right: 10px;
+}
+.wrapperCenter {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.TextAcc {
+  color: white;
+  font-size: 2.3rem;
+}
+.input-icon:nth-child(2):hover {
+  background-color: green;
+}
+footer {
+  background: #1c252c;
+  display: flex;
+  flex-direction: column;
+}
+.upper {
+  width: 100%;
+
+  height: 150px;
+}
+.bottom {
+  background: rgba(55, 68, 78, 0.6);
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+section {
+  height: 50vh;
+}
+.logo img {
+  height: 80px;
+  width: 140px;
+}
+a {
+  text-decoration: none;
+  color: white;
 }
