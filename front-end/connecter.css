@@ -1,0 +1,187 @@
+body {
+  background-image: linear-gradient(rgba(66, 78, 91, 0.5), hsla(0, 0%, 100%, 0)),
+    url(https://www.tecnocasa.tn/img/home-hero/tn/tecnocasa/residential/mobile_4.jpg);
+}
+
+.wrap-login100 {
+  position: relative;
+
+  width: 600px;
+  background-color: white;
+  border-radius: 20px;
+  /* overflow: hidden; */
+  -webkit-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.container-login100 {
+  width: 100%;
+
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+
+  background-color: white;
+}
+
+.login100-form {
+  width: 100%;
+}
+.p-r-55 {
+  padding-right: 55px;
+}
+.p-l-55 {
+  padding-left: 55px;
+}
+.p-t-178 {
+  padding-top: 178px;
+}
+.login100-form-title {
+  font-family: JosefinSans-Bold;
+  font-size: 30px;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #57b846;
+  padding-top: 50px;
+  padding-bottom: 39px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.validate-input {
+  position: relative;
+}
+.wrap-input100 {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 27px;
+  z-index: 1;
+}
+.m-b-16 {
+  margin-bottom: 16px;
+}
+.input100 {
+  font-family: Ubuntu-Bold;
+  font-size: 15px;
+  color: #1b3815;
+  line-height: 1.2;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 55px;
+  background: #ebebeb;
+  border-radius: 27px;
+  padding: 0 35px 0 35px;
+}
+.wrap-input100 input {
+  outline: none;
+  border: none;
+  overflow: visible;
+}
+.focus-input100 {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 31px;
+  background-color: #ebebeb;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+.p-b-23 {
+  padding-bottom: 23px;
+}
+.p-t-13 {
+  padding-top: 13px;
+}
+.text-right {
+  text-align: right !important;
+  width: 80%;
+}
+.txt1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color: #999;
+  line-height: 1.4;
+}
+.txt2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 15px;
+  color: #57b846;
+  line-height: 1.4;
+}
+.txt1 a {
+  margin: 0;
+  -moz-transition: all 0.3s;
+}
+.container-login100-form-btn {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  position: relative;
+}
+.login100-form-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  background-color: #57b846;
+  border-radius: 25px;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  transition: all 0.4s;
+}
+.limiter button {
+  outline: none !important;
+  border: none;
+}
+
+.flex-col-c {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+.p-b-40 {
+  padding-bottom: 40px;
+}
+.p-t-170 {
+  padding-top: 140px;
+}
+.login100-form-btn:hover {
+  background-color: #1b3815;
+}
+.limiter button:hover {
+  cursor: pointer;
+}
+.container-login100 {
+  background: url("https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60")
+    no-repeat center center fixed;
+}
+
+.m-t-16 {
+  margin-top: 16px;
+}
+
+.p-t-40 {
+  padding-top: 40px;
+}
