@@ -1,84 +1,136 @@
-.autre_page {
-    display: flex;
+.mon-bien-page {
+  display: flex;
+  background-color: #fff;
 }
 
-.evaluer, .evaluation-section {
-    flex: 1;
-    padding: 10px;
-    box-sizing: border-box;
-}
-.autre_page h1,
-.autre_page p,
-.autre_page select,
-.autre_page input {
-    color: grey;
+.evaluer,
+.evaluation-section {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.autre_page input,
-.autre_page select {
-    border-radius: 17px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    width: 30%;
-    padding-right: 10px;
+.mon-bien-page select,
+.mon-bien-page input {
+  color: black;
+}
+.mon-bien-page h1 {
+  font-size: 20px;
+  font-family: "Nunito", sans-serif;
+  color: hsl(0, 0%, 45%);
 }
 
-.partie1 {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center; /* Pour aligner les éléments verticalement au centre */
-    font-size: 20px;
+.mon-bien-page input,
+.mon-bien-page select {
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 93%);
+  padding: 10px;
 }
 
-.slection {
-    display: flex;
+.first-row-info select {
+  /* display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 20px; */
+  margin-right: 0.8rem;
+  height: 40px;
+  border: none;
 }
-
-.slection 
-.slection  {
-    margin-right: 10px; /* Espacement entre les éléments */
-    font-size: 20px;
-    font-size: 20px;
+.wrap-sl-info-bien {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px; /* Espacement entre les éléments */
+  font-size: 20px;
+  font-size: 20px;
 }
-
-
-.selectionnement {
-    display: flex;
-    flex-direction: column; /* Affichage en colonne */
-    align-items: center; /* Centrer les éléments horizontalement */
-    font-size: 20px ;
+.twofirst-select {
+  display: flex;
+  margin-bottom: 0.8rem;
 }
-
-.sous_partie,
-.sous_partie2 {
-    display: flex;
-    font-size: 20px;
+.wrap-sl-donnee {
+  display: flex;
+  flex-direction: column; /* Affichage en colonne */
+  align-items: center; /* Centrer les éléments horizontalement */
+  font-size: 20px;
 }
-
-.sous_partie input,
-.sous_partie2 input {
-    margin-right: 10px; /* Espacement entre les éléments */
-    font-size: 20px;
+.inp-nom-prenom,
+.inp-mail-numb {
+  display: flex;
+  font-size: 20px;
 }
-
-.slection,.autre_page, .ssselection ,.sous_partie,.sous_partie2,.partie {
-    background-color: #f0f0f0; /* Fond gris */
-    color: #808080;
-   
-    font-size: 20px;
+.inp-nom-prenom input,
+.inp-mail-numb input {
+  margin-right: 10px; /* Espacement entre les éléments */
+  font-size: 20px;
 }
-.sselection{
-    font-size: 20px;
+.info-bien-sl {
+  padding: 10px;
 }
-.message{
-
+.wrap-sl-info-bien,
+.mon-bien-page,
+.info-bien-sl,
+.inp-nom-prenom,
+.inp-mail-numb,
+.partie {
+  /* color: #808080; */
+  font-size: 20px;
+}
+.sl-typologie {
+  font-size: 20px;
+  padding: 10px;
+}
+.agence {
+  font-size: 20px;
+  padding: 10px;
+}
+.message {
   font-size: 20px;
   width: 900px;
   height: 100px;
-   
+}
+.sl-agence {
+  width: 95%;
+}
+.sl-agence select {
+  width: 100%;
+  height: 40px;
+  border: none;
 }
 
+.second-row-donne input {
+  margin-bottom: 0.7rem;
 
+  border: none;
+  width: 45%;
+}
 
+.twofirst-select select {
+  width: 47%;
+}
 
+textarea::placeholder,
+.mon-bien-page input::placeholder {
+  color: grey;
+}
+.submit-query-wrap {
+  position: relative;
+  height: 40px;
+}
+.submit-query-wrap button {
+  border: none;
+  width: clamp(100px, 88%, 200px);
+  transition: all 0.3s ease;
+  height: 40px;
+  position: absolute;
+  border-radius: 10px;
+
+  right: 2rem;
+  background: hsl(0, 0%, 85%);
+  font-size: 15px;
+}
+
+.submit-query-wrap button:hover {
+  background-color: #158140;
+  color: white;
+  box-shadow: 0 0 14px rgba(66, 78, 91, 0.58) !important;
+}

@@ -4,79 +4,91 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
-    <link rel="stylesheet" href="index1.css" />
+    <link rel="stylesheet" href="evaluation.css" />
   </head>
   <body>
-    <div class="autre_page">
-        <div class="evaluer">
-            <div class="Text">
-                <h1 classe="premier">Remplissez le formulaire pour être contacté</h1>
-                <p class="deuxieme">Grâce à notre connaissance approfondie du marché local, 
-                    nous sommes en mesure de réaliser une évaluation du marché dans des termes précis 
-                    et en respectans les délais impartis.</p>
-                </div>
-            </div>
-          <div class="evaluation-section ">
-            <div class="evaluation-container">
-             <div class="evaluation-form-container">
-                <form>
-                    <div class="partie1">
-                        <h1>Saisissez les informations de votre bien</h1>
-                    <div class="slection">
-                        <select class="ssselection">
-                            <option>vente ou louer</option> 
-                            <option>vente </option> 
-                            <option> louer</option> 
-                         </select>
-                         <select class="sselection">
-                             <option>typologie</option> 
-                             <option>villa </option> 
-                             <option> appartement</option> 
-                         </select>
-                         <br>
-                         <select class="ssselection">
-                             <option> agence </option>
-                             <option> agence ain zaghouan</option>
-                             <option> agence manar</option>
-                             <option> agence ariana</option>
-                         </select>
-                    </div>
-                    
-                   </div>
-                   <div class="partie2">
-                    <div><h1>inserer vos donnée</h1> 
-                    </div>
-                    
-                    <div classe="selectionnement">
-                         <div class="sous_partie">
-                        <input type="text" class="input"  placeholder="nom" >
-                        <input type="text" class="prenom"  placeholder="prenom" >
-                        <br>
-                         </div> 
-                        <br>
+    <div class="mon-bien-page">
+      <div class="evaluer">
+        <div class="Text">
+          <h1 classe="premier">Remplissez le formulaire pour être contacté</h1>
+          <p class="deuxieme">
+            Grâce à notre connaissance approfondie du marché local, nous sommes
+            en mesure de réaliser une évaluation du marché dans des termes
+            précis et en respectans les délais impartis.
+          </p>
+        </div>
+      </div>
+      <div class="evaluation-section">
+        <div class="evaluation-container">
+          <div class="evaluation-form-container">
+            <form>
+              <div class="first-row-info">
+                <h1>Saisissez les informations de votre bien</h1>
 
-                        <div class="sous_partie2">
-                            <input type="email" class="input" name="email" placeholder="entrer votre e-mail"> 
-                        <input id="num"  type="number"  placeholder=" + 216 ">
-                        </div>
-                    </div>
-                    <div class="partie3">
-                        <h1>laissez votre message</h1>
-                        <input type="text" class="message"  placeholder="meesage" >
-                    </div>
+                <div class="wrap-sl-info-bien">
+                  <div class="twofirst-select">
+                    <select class="info-bien-sl">
+                      <option>vente ou louer</option>
+                      <option>vente</option>
+                      <option>louer</option>
+                    </select>
+                    <select class="sl-typologie">
+                      <option>typologie</option>
+                      <option>villa</option>
+                      <option>appartement</option>
+                    </select>
+                  </div>
+                  <div class="sl-agence">
+                    <select class="agence">
+                      <option>agence</option>
+                      <option>agence ain zaghouan</option>
+                      <option>agence manar</option>
+                      <option>agence ariana</option>
+                    </select>
+                  </div>
                 </div>
-                <br>
-                <div class="bouton">
-                    <input type="submit" class="button" placeholder="soumettre a l'agence"   > 
+              </div>
+              <div class="second-row-donne">
+                <div><h1>inserer vos donnée</h1></div>
 
+                <div classe="">
+                  <div class="inp-nom-prenom">
+                    <input type="text" class="nom" placeholder="nom" />
+                    <input type="text" class="prenom" placeholder="prenom" />
+                    <br />
+                  </div>
+
+                  <div class="inp-mail-numb">
+                    <input
+                      type="email"
+                      class="input"
+                      name="email"
+                      placeholder="entrer votre e-mail"
+                    />
+                    <input id="num" type="number" placeholder=" + 216 " />
+                  </div>
                 </div>
-                </form>
-                
-            </div>
-            </div>
+                <div class="inp-msg-are">
+                  <h1>laissez votre message</h1>
+                  <!-- <input type="text" placeholder="meesage" /> -->
+                  <textarea
+                    name=""
+                    placeholder="message"
+                    id=""
+                    class="message"
+                    cols="30"
+                    rows="10"
+                  ></textarea>
+                </div>
+              </div>
+              <br />
+              <div class="submit-query-wrap">
+                <button class="button-vld">submit query</button>
+              </div>
+            </form>
           </div>
+        </div>
+      </div>
     </div>
-    
-          
   </body>
 </html>
