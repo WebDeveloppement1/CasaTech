@@ -1,0 +1,84 @@
+.autre_page {
+    display: flex;
+}
+
+.evaluer, .evaluation-section {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.autre_page h1,
+.autre_page p,
+.autre_page select,
+.autre_page input {
+    color: grey;
+}
+
+.autre_page input,
+.autre_page select {
+    border-radius: 17px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    padding-right: 10px;
+}
+
+.partie1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* Pour aligner les éléments verticalement au centre */
+    font-size: 20px;
+}
+
+.slection {
+    display: flex;
+}
+
+.slection 
+.slection  {
+    margin-right: 10px; /* Espacement entre les éléments */
+    font-size: 20px;
+    font-size: 20px;
+}
+
+
+.selectionnement {
+    display: flex;
+    flex-direction: column; /* Affichage en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+    font-size: 20px ;
+}
+
+.sous_partie,
+.sous_partie2 {
+    display: flex;
+    font-size: 20px;
+}
+
+.sous_partie input,
+.sous_partie2 input {
+    margin-right: 10px; /* Espacement entre les éléments */
+    font-size: 20px;
+}
+
+.slection,.autre_page, .ssselection ,.sous_partie,.sous_partie2,.partie {
+    background-color: #f0f0f0; /* Fond gris */
+    color: #808080;
+   
+    font-size: 20px;
+}
+.sselection{
+    font-size: 20px;
+}
+.message{
+
+  font-size: 20px;
+  width: 900px;
+  height: 100px;
+   
+}
+
+
+
+
