@@ -1,171 +1,175 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    height: 120vh;
-    color: #888;
-  }
-  
-  .wrapper-trouver {
-    height: 550px;
-    background-image: linear-gradient(rgba(66, 78, 91, 0.5), hsla(0, 0%, 100%, 0)),
-      url(https://www.tecnocasa.tn/img/hero/hero-agencies-home-mobile.jpg);
-    background-size: contain;
-    position: relative;
-    margin-bottom: 20px;
-  }
-  
-  .wrapper-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .list ul {
-    display: flex;
-    list-style: none;
-    gap: 0.7rem;
-    color: white;
-  }
-  .list ul li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.3rem;
-  }
-  
-  .list ul li p {
-    font-size: 0.99rem;
-    padding: 6px;
-  }
-  
-  .logo {
-    color: white;
-  }
-  .bienvenu {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
-  }
-  
-  .input-icon {
-    border-radius: 17px;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    width: 100%;
-  
-    padding-right: 10px;
-  }
-  .wrapperCenter {
-    width: 360px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .TextAcc {
-    color: white;
-    font-size: 2.3rem;
-    margin-right: 0px;
-    text-align: center;
-    padding-top: 150px;
-    font-weight: bold;
-  
-    
-  }
-  .phrase {
-    display: inline;
-  }
-  
-  .input-icon:nth-child(2):hover {
-    background-color: green;
-  }
-  footer {
-    background: #1c252c;
-    display: flex;
-    flex-direction: column;
-  }
-  .upper {
-    width: 100%;
-  
-    height: 150px;
-  }
-  .bottom {
-    background: rgba(55, 68, 78, 0.6);
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    color: white;
-  }
-  .sous_agence{
-    display: flex;
-    justify-content: space-between;
-    gap: 100px;
-  }
-  
-  .lien {
-    display: flex;
-    
-    color: black;
-    text-decoration: none;
-    display: block;
-    transition: inherit;
-    background-color:#f0f0f0;
-    border-radius: 20px; 
-    padding: 5px 10px;
-    margin-bottom: 10px;
-    margin-right: 300px;
-    margin-left: 300Spx;
-    list-style-type: none;
-    font-size: 15px;
-    padding: 10px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.liens {
+body {
+  height: 120vh;
+  color: #888;
+}
+
+.wrapper-trouver {
+  height: 550px;
+  background-image: linear-gradient(rgba(66, 78, 91, 0.5), hsla(0, 0%, 100%, 0)),
+    url(https://www.tecnocasa.tn/img/hero/hero-agencies-home-mobile.jpg);
+  background-size: contain;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.wrapper-nav {
   display: flex;
-  
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.list ul {
+  display: flex;
+  list-style: none;
+  gap: 0.7rem;
+  color: white;
+}
+.list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.list ul li p {
+  font-size: 0.99rem;
+  padding: 6px;
+}
+
+.logo {
+  color: white;
+}
+.bienvenu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.input-icon {
+  border-radius: 17px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding-right: 10px;
+}
+.wrapperCenter {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.TextAcc {
+  color: white;
+  font-size: 2.3rem;
+  margin-right: 0px;
+  text-align: center;
+  padding-top: 150px;
+  font-weight: bold;
+}
+.phrase {
+  display: inline;
+  width: 100%;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.input-icon:nth-child(2):hover {
+  background-color: green;
+}
+footer {
+  background: #1c252c;
+  display: flex;
+  flex-direction: column;
+}
+.upper {
+  width: 100%;
+
+  height: 150px;
+}
+.bottom {
+  background: rgba(55, 68, 78, 0.6);
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  color: white;
+}
+.sous_agence {
+  display: flex;
+  /* justify-content: space-around; */
+  gap: 10rem;
+
+  width: 85%;
+  justify-content: center;
+  margin: auto;
+}
+
+.lien {
+  display: flex;
+
   color: black;
   text-decoration: none;
   display: block;
   transition: inherit;
-  background-color:#f0f0f0;
-  border-radius: 20px; 
+  background-color: #f0f0f0;
+  border-radius: 20px;
   padding: 5px 10px;
   margin-bottom: 10px;
-  margin-left: 50px;
+  list-style-type: none;
   font-size: 15px;
   padding: 10px;
-  
 }
-.lien :hover{
-  transform: scale(1.1);
-}
-.icon{
-  color: navy; 
-  margin-left: 50px;
-  font-family: Arial, sans-serif;
-}
-.icon2{
-  color: navy; 
-  margin-right: 50px;
-  font-family: Arial, sans-serif;
-}
-.link {
+.liens {
   display: flex;
-  font-size: 20px;
-  color:white;
+
+  color: black;
   text-decoration: none;
   display: block;
   transition: inherit;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  /* margin-left: 50px; */
+  font-size: 15px;
+  padding: 10px;
+}
+.lien :hover {
+  transform: scale(1.1);
+}
+.icon {
+  color: navy;
+  /* margin-left: 50px; */
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.link {
+  display: flex;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  transition: inherit;
+}
+
+.ville {
+  width: 100%;
 }
