@@ -86,8 +86,10 @@
       <!--  -->
       </div>
     </header>
+    <div class="titreEval">
+      <h1>Evaluer Mon Bien</h1>
+    </div>
     <section class="sec-eval">
-        <h1>Evaluer Mon Bien</h1>
       <div class="mon-bien-page">
         <div class="evaluer">
             <div class="img-left">
@@ -139,8 +141,8 @@
 
                   <div classe="">
                     <div class="inp-nom-prenom">
-                      <input type="text" id="nom" required class="nom" placeholder="nom" />
-                      <input type="text" id="prenom" required class="prenom" placeholder="prenom" />
+                      <input type="text" id="nom"  class="nom" placeholder="nom" />
+                      <input type="text" id="prenom"  class="prenom" placeholder="prenom" />
                       <br />
                     </div>
 
@@ -149,10 +151,11 @@
                         type="email"
                         class="input"
                         name="email"
+                        id="email"
                         placeholder="entrer votre e-mail"
                         required
                       />
-                      <input id="num" type="number" required placeholder=" + 216 " />
+                      <input id="num" type="number"  placeholder=" + 216 " />
                     </div>
                   </div>
 
@@ -179,7 +182,9 @@
                     submit query
                   </button>
                 </div> -->
+                
                 <div class="button-vld">
+                  <span id="error">Error msg</span>
                 <input type="submit" value="submit">
                 </div>
               </form>

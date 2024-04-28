@@ -121,18 +121,27 @@ textarea::placeholder,
 }
 .button-vld {
   position: relative;
+  /* border: 5px solid; */
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
 }
 .button-vld input {
   border: none;
   width: clamp(100px, 88%, 200px);
   transition: all 0.3s ease;
   height: 40px;
-  position: absolute;
+  /* position: absolute; */
   border-radius: 20px;
-  right: 3.1rem;
   background: hsl(0, 0%, 85%);
   background: hsl(0, 0%, 90%);
   font-size: 20px;
+  margin: 0;
+}
+.button-vld span {
+  opacity: 0;
+  padding: 10px;
+  color: red;
 }
 
 .button-vld input:hover {
@@ -154,7 +163,6 @@ textarea::placeholder,
   text-align: center;
   border-radius: 2px;
   box-shadow: 0 0 10px #999;
-
   position: fixed;
   z-index: 1;
   left: 0;
@@ -258,7 +266,6 @@ textarea::placeholder,
     opacity: 0;
   }
 }
-
 @keyframes fadeout {
   from {
     bottom: 330px;
@@ -271,20 +278,22 @@ textarea::placeholder,
 }
 .sec-eval {
   min-height: 100vh;
-  border: 5px solid;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
+}
+.titreEval {
+  padding-top: 5rem;
+  text-align: center;
 }
 .first-row-info h1 {
   margin-bottom: 1rem;
 }
 .evaluer {
   display: flex;
-
   gap: 1rem;
   width: 30%;
 }
