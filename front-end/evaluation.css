@@ -134,3 +134,92 @@ textarea::placeholder,
   color: white;
   box-shadow: 0 0 14px rgba(66, 78, 91, 0.58) !important;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 120vh;
+  color: #888;
+}
+
+.wrapper-header {
+  height: 550px;
+  background-image: linear-gradient(rgba(66, 78, 91, 0.5), hsla(0, 0%, 100%, 0));
+  background-size: contain;
+  position: relative;
+  height: 200px;
+}
+
+.wrapper-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.list ul {
+  display: flex;
+  list-style: none;
+  gap: 0.7rem;
+  color: white;
+}
+.list ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.list ul li p {
+  font-size: 0.99rem;
+  padding: 6px;
+}
+
+.logo {
+  color: white;
+}
+.bienvenu {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.input-icon {
+  border-radius: 17px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  padding-right: 10px;
+}
+.wrapperCenter {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.TextAcc {
+  color: white;
+  font-size: 2.3rem;
+  margin-right: 0px;
+}
+.input-icon:nth-child(2):hover {
+  background-color: green;
+}
+.head{
+  text-decoration: none;
+  color: white;
+}
