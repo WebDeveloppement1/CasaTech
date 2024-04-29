@@ -11,9 +11,11 @@
       <div class="limiter">
         <div class="container-login100">
           <div class="wrap-login100">
-            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+            <form action="http://127.0.0.1/edsa-casatech/back-end/connexion.php " class="login100-form validate-form p-l-55 p-r-55 p-t-178" >
               <span class="login100-form-title"> Rejoindre </span>
-
+              <?php if (!empty($message)) : ?>
+         <p><?php echo $message; ?></p>
+    <?php endif; ?>
               <div
                 class="wrap-input100 validate-input m-b-16"
                 data-validate="Please enter username"
@@ -34,7 +36,7 @@
                 <input
                   class="input100"
                   type="email"
-                  name="pass"
+                  name="email"
                   placeholder="email"
                 />
                 <span class="focus-input100"></span>
@@ -46,7 +48,7 @@
                 <input
                   class="input100"
                   type="password"
-                  name="pass"
+                  name="password"
                   placeholder="password"
                 />
                 <span class="focus-input100"></span>

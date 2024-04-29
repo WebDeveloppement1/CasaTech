@@ -53,7 +53,7 @@
               <div class="flex-col-c p-t-170 p-b-40">
                 <span class="txt1 p-b-9"> Don’t have an account? </span>
 
-                <a href="sign-in-page.html" class="txt3"> Sign up now </a>
+                <a href="sign-in-page.php" class="txt3"> Sign up now </a>
               </div>
             </form>
           </div>
