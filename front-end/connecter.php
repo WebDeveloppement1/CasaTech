@@ -1,8 +1,17 @@
+<?php 
+//ouvrir une session
+session_start();
+
+//verifier sil ya msg derreur
+?>
+
+
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="connecter.css" />
+    <link rel="stylesheet" href="connecter1.css" />
     <title>Log in</title>
   </head>
   <body class="bodyconnect">
@@ -54,6 +63,15 @@
                 <span class="txt1 p-b-9"> Don’t have an account? </span>
 
                 <a href="sign-in-page.php" class="txt3"> Sign up now </a>
+              </div>
+              <div class="error"> 
+                <?php 
+                if(isset($_SESSION['message'])){
+                  echo "<p>" . $_SESSION['message'] . "</p>";
+                  unset($_SESSION['message']);
+              }
+                
+                ?>
               </div>
             </form>
           </div>

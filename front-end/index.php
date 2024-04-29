@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,7 +51,7 @@
                   d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 1 0 1 0v-1h1a.5.5 0 1 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"
                 />
               </svg>
-              <a href="evaluation.html"> <p>Evaluer mon bien</p></a>
+              <a href="evaluation.php"> <p>Evaluer mon bien</p></a>
             </li>
             <li class="wrap-list">
               <svg
@@ -64,11 +67,12 @@
                 />
               </svg>
 
-              <a href="http://127.0.0.1:5500/trouver.html">
+              <a href="trouver.php">
                 <p>Chercher une agence</p></a
               >
             </li>
-            <li class="wrap-list">
+            <?php if(isset($_SESSION["username"])): ?>
+              <li class="wrap-list">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -81,14 +85,34 @@
                   d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
                 />
               </svg>
-              <a href="connecter.php"> <p>Se connecter</p></a>
+              <a href="http://127.0.0.1/edsa-casatech/back-end/deconnecter.php"> <p>Se Deconnecter</p></a>
             </li>
+              
+              <?php else: ?>
+
+              <li class="wrap-list">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-person"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                  />
+                </svg>
+                <a href="connecter.php"> <p>Se connecter</p></a>
+              </li>
+              <?php endif;
+              ?>
           </ul>
         </div>
       </nav>
       <div class="bienvenu">
         <div class="wrapperCenter">
-          <div class="TextAcc">Welcome</div>
+          <div class="TextAcc">Welcome <?php echo isset($_SESSION["username"]) ? $_SESSION["username"] : '' ?> </div>
           <div class="searchWrapper">
             <div class="">
               <select class="region">

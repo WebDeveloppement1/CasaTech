@@ -168,7 +168,7 @@ body {
   padding-top: 140px;
 }
 .login100-form-btn:hover {
-  background-color: #1b3815;
+  /* background-color: #1b3815; */
 }
 .limiter button:hover {
   cursor: pointer;
@@ -184,4 +184,13 @@ body {
 
 .p-t-40 {
   padding-top: 40px;
+}
+.error {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.error p {
+  color: red !important;
+  font-size: 1.4rem !important;
 }

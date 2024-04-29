@@ -11,7 +11,7 @@
       <div class="limiter">
         <div class="container-login100">
           <div class="wrap-login100">
-            <form action="http://127.0.0.1/edsa-casatech/back-end/connexion.php " class="login100-form validate-form p-l-55 p-r-55 p-t-178" >
+            <form action="http://127.0.0.1/edsa-casatech/back-end/connexion.php " method="POST" class="login100-form validate-form p-l-55 p-r-55 p-t-178" >
               <span class="login100-form-title"> Rejoindre </span>
               <?php if (!empty($message)) : ?>
          <p><?php echo $message; ?></p>

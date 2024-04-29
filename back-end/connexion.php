@@ -1,4 +1,6 @@
 <?php
+//start the session 
+session_start();
 // Database credentials
 $servername = "localhost";
 $username = "root";
@@ -18,14 +20,17 @@ $stmt = $conn->prepare("INSERT INTO users (username, email, password, tel) VALUE
 $stmt->bind_param("ssss", $username, $email, $password, $tel);
 
 // Set the values for the parameters
-$username = "JohnDoe";
-$email = "johndoe@example.com";
-$password = "password123";
-$tel = "12345678";
+// Get the username from the front end
+$username = $_POST["username"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+$tel = $_POST["tel"];
 
 // Execute the statement
 if ($stmt->execute()) {
-    echo "Data inserted successfully.";
+    $_SESSION["username"] = $username;
+    header("Location: ../front-end/index.php");
+    exit();
 } else {
     echo "Error inserting data: " . $stmt->error;
 }

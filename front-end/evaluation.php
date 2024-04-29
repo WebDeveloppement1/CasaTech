@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,7 +32,7 @@
                   d="M5 2a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2h3.5A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5H14a.5.5 0 0 1-1 0H3a.5.5 0 0 1-1 0h-.5A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2zm1 0h4a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1M1.5 3a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H3V3zM15 12.5v-9a.5.5 0 0 0-.5-.5H13v10h1.5a.5.5 0 0 0 .5-.5m-3 .5V3H4v10z"
                 />
               </svg>
-              <a href="index.html"><p>Immobilier Professionnel</p></a>
+              <a href="index.php"><p>Immobilier Professionnel</p></a>
             </li>
             <li class="wrap-list">
               <svg
@@ -47,7 +50,7 @@
                   d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 1 0 1 0v-1h1a.5.5 0 1 0 0-1h-1v-1a.5.5 0 0 0-.5-.5"
                 />
               </svg>
-              <a href="evaluation.html"> <p>Evaluer mon bien</p></a>
+              <a href="evaluation.php"> <p>Evaluer mon bien</p></a>
             </li>
             <li class="wrap-list">
               <svg
@@ -63,9 +66,10 @@
                 />
               </svg>
 
-              <a href="#"> <p>Chercher une agence</p></a>
+              <a href="trouver.php"> <p>Chercher une agence</p></a>
             </li>
-            <li class="wrap-list">
+            <?php if(isset($_SESSION["username"])): ?>
+              <li class="wrap-list">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -78,8 +82,28 @@
                   d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
                 />
               </svg>
-              <a href="connecter.html"> <p>Se connecter</p></a>
+              <a href="http://127.0.0.1/edsa-casatech/back-end/deconnecter.php"> <p>Se Deconnecter</p></a>
             </li>
+              
+              <?php else: ?>
+
+              <li class="wrap-list">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="25"
+                  fill="currentColor"
+                  class="bi bi-person"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"
+                  />
+                </svg>
+                <a href="connecter.php"> <p>Se connecter</p></a>
+              </li>
+              <?php endif;
+              ?>
           </ul>
         </div>
       </nav>
