@@ -9,6 +9,10 @@ session_start();
     <!-- CSS -->
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="sign-in.css" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <title>CasaTech</title>
   </head>
@@ -16,7 +20,7 @@ session_start();
     <header class="wrapper-header">
       <nav class="wrapper-nav">
         <div class="logo">
-          <img src="./assests/tecnocasa-tn.svg" alt="" />
+          <img src="./assests/logo.png" alt="" height="120"  width="120" />
         </div>
         <div class="list">
           <ul>
@@ -257,7 +261,8 @@ session_start();
           height="450"
         />
       </div>
-      <div class="Text">
+      <?php if (!isset($_SESSION['username'])): ?>
+    <div class="Text">
         <h1 class="titre6">inscrivez-vous !</h1>
         <p class="paragraphe5">
           Trouvez votre prochain chez-vous dès maintenant ! Inscrivez-vous pour
@@ -268,7 +273,13 @@ session_start();
           une propriété exceptionnelle. Inscrivez-vous dès aujourd'hui !"
         </p>
         <a href="#" id="signIn-show"> s'inscrire </a>
+    </div>
+    <?php else: ?>
+      <div class="logged_in_user">
+        <p>Bienvenu a notre plateform <?php echo $_SESSION['username'] ?> ,<span>si vous avez une remarque vous pouvez nous contacter </span></p> 
+        <a href="contact.php" class="contact"> Contacter</a>
       </div>
+    <?php endif; ?>
     </div>
     <br />
     <br />
@@ -356,10 +367,127 @@ session_start();
         <button type="submit">Sign Up</button>
       </form>
     </div>
+    
     <footer>
       <div class="footerWrapper">
-        <div class="upper">infos</div>
-        <div class="bottom">Donnees</div>
+        <div class="upper">
+          <div class="row">
+            <div class="logo">
+              <img src="./assests/logo.png" alt="" height="120" width="120" />
+            </div>
+            <div class="social-icons">
+              <a href="#">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+          <div class="siege_national">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <g transform="translate(-556 -250)">
+                <path
+                  d="M15,17.75H5A5.869,5.869,0,0,1,.865,16.362,5.686,5.686,0,0,1-.75,12V5A5.686,5.686,0,0,1,.865.638,5.869,5.869,0,0,1,5-.75H15A5.869,5.869,0,0,1,19.135.638,5.686,5.686,0,0,1,20.75,5v7a5.686,5.686,0,0,1-1.615,4.362A5.869,5.869,0,0,1,15,17.75ZM5,.75a4.442,4.442,0,0,0-3.115.987A4.271,4.271,0,0,0,.75,5v7a4.271,4.271,0,0,0,1.135,3.263A4.442,4.442,0,0,0,5,16.25H15a4.442,4.442,0,0,0,3.115-.987A4.271,4.271,0,0,0,19.25,12V5a4.271,4.271,0,0,0-1.135-3.263A4.442,4.442,0,0,0,15,.75Z"
+                  transform="translate(558 253.5)"
+                  fill="white"
+                />
+                <path
+                  d="M4.995,3.865a3.761,3.761,0,0,1-2.342-.778L-.469.585A.75.75,0,0,1-.585-.469.75.75,0,0,1,.469-.585l3.12,2.5a2.4,2.4,0,0,0,2.814,0l3.129-2.5a.75.75,0,0,1,1.054.118A.75.75,0,0,1,10.468.586l-3.13,2.5A3.761,3.761,0,0,1,4.995,3.865Z"
+                  transform="translate(563 259)"
+                  fill="white"
+                />
+                <path
+                  d="M0,0H24V24H0Z"
+                  transform="translate(556 250)"
+                  fill="white"
+                  opacity="0"
+                />
+              </g>
+            </svg>
+            <ul>
+              <li>
+                <a href="https://www.tecnocasagroup.tn/siege" target="_blank"
+                  >Siège national</a
+                >
+              </li>
+              <li>
+                <a href="#" class="small" target="_blank">CasaTech.tn</a>
+              </li>
+            </ul>
+          </div>
+          <div class="download">
+            <div class="headerDown">
+              <svg
+                id="get_app-24px"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  id="Tracciato_1484"
+                  data-name="Tracciato 1484"
+                  d="M0,0H24V24H0Z"
+                  fill="none"
+                />
+                <path
+                  id="Tracciato_1485"
+                  data-name="Tracciato 1485"
+                  d="M13,5v6h1.17L12,13.17,9.83,11H11V5h2m2-2H9V9H5l7,7,7-7H15Zm4,15H5v2H19Z"
+                  fill="#e2edf0"
+                />
+              </svg>
+              <p class="telechargement">télécharger l'application</p>
+            </div>
+
+            <div class="list-appli">
+              <ul>
+                <li>
+                  <a
+                    href="https://play.google.com/store/games?hl=fr&gl=US"
+                    target="_blank"
+                  >
+                    <img
+                      alt="android"
+                      src="assests/android.png"
+                      width="100"
+                      height="30"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://apps.apple.com/us/app/tecnocasa-tunisia/id1508748425"
+                    target="_blank"
+                  >
+                    <img
+                      alt="android"
+                      src="./assests/ios.png"
+                      width="100"
+                      height="30"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <p class="lieu">
+            2024 "Siege Master Franchise Tunisie" Tecno Real Estate - 72, Avenue
+            Mouaouia Ibn Abi Sofiane, El Menzah 7, Ariana 2037 Tunis
+          </p>
+        </div>
       </div>
     </footer>
   </body>

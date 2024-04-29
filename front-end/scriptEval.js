@@ -53,7 +53,7 @@ function launch_toast() {
     x.className = "show";
     setTimeout(function () {
       x.className = x.className.replace("show", "");
-      window.location.href = "index.html";
+      window.location.href = "index.php";
     }, 3000);
   }
   return false;

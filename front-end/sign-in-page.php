@@ -1,8 +1,13 @@
+<?php 
+session_start();
+
+?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="connecter.css" />
+    <link rel="stylesheet" href="connecter2.css" />
     <title>Log in</title>
   </head>
   <body class="bodyconnect">
@@ -68,10 +73,16 @@
               <div class="flex-col-c p-t-40 p-b-40">
                 <span class="txt1 p-b-9"> have an account? </span>
 
-                <a href="connecter.html" class="txt3"> Log in now </a>
+                <a href="connecter.php" class="txt3"> Log in now </a>
               </div>
+              
               <div class="container-login100-form-btn">
                 <button class="login100-form-btn">Sign Up</button>
+                <?php 
+                if(isset($_SESSION['message_inscr'])){
+                  echo "<p class='err_signin'>" . $_SESSION['message_inscr'] . "</p>";
+                  unset($_SESSION['message_inscr']);}
+                ?>
               </div>
             </form>
           </div>

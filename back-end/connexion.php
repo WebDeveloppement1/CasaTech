@@ -1,22 +1,7 @@
 <?php
-//start the session 
-session_start();
-// Database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "projeweb";
-
-// Create a connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include 'CoonectDb.php';
 // Prepare and bind the SQL statement
-$stmt = $conn->prepare("INSERT INTO users (username, email, password, tel) VALUES (?, ?, ?, ?)");
+$stmt = $connection->prepare("INSERT INTO users (username, email, password, tel) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $username, $email, $password, $tel);
 
 // Set the values for the parameters
@@ -32,10 +17,11 @@ if ($stmt->execute()) {
     header("Location: ../front-end/index.php");
     exit();
 } else {
-    echo "Error inserting data: " . $stmt->error;
+    $_SESSION["message_inscr"] = "Erreur lors de l'inscription";
+    header("Location: ../front-end/sign-in-page.php");
 }
 
 // Close the statement and connection
 $stmt->close();
-$conn->close();
+$connection->close();
 ?>

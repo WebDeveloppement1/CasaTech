@@ -1,7 +1,7 @@
 .mon-bien-page {
   display: flex;
   background-color: #fff;
-  width: 80%;
+  width: 90%;
   gap: 2rem;
 }
 
@@ -295,12 +295,12 @@ textarea::placeholder,
 .evaluer {
   display: flex;
   gap: 1rem;
-  width: 30%;
+  width: 40%;
 }
 .Text {
   text-align: left;
   /* margin-top: 5rem; */
-  width: 100%;
+  width: 100% !important;
 }
 .Text h1 {
   margin-bottom: 1rem;

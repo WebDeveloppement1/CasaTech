@@ -11,7 +11,7 @@ session_start();
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="connecter1.css" />
+    <link rel="stylesheet" href="connecter2.css" />
     <title>Log in</title>
   </head>
   <body class="bodyconnect">
@@ -20,7 +20,7 @@ session_start();
       <div class="limiter">
         <div class="container-login100">
           <div class="wrap-login100">
-            <form class="login100-form validate-form p-l-55 p-r-55 p-t-178">
+            <form action="http://127.0.0.1/edsa-casatech/back-end/login.php" method="POST" class="login100-form validate-form p-l-55 p-r-55 p-t-178">
               <span class="login100-form-title"> Connecter </span>
 
               <div
@@ -43,7 +43,7 @@ session_start();
                 <input
                   class="input100"
                   type="password"
-                  name="pass"
+                  name="password"
                   placeholder="Password"
                 />
                 <span class="focus-input100"></span>
@@ -56,23 +56,28 @@ session_start();
               </div>
 
               <div class="container-login100-form-btn">
-                <button class="login100-form-btn">Sign in</button>
+                <button type="submit" class="login100-form-btn">Sign in</button>
               </div>
-
-              <div class="flex-col-c p-t-170 p-b-40">
-                <span class="txt1 p-b-9"> Don’t have an account? </span>
-
-                <a href="sign-in-page.php" class="txt3"> Sign up now </a>
-              </div>
-              <div class="error"> 
+              <div class="error_log">
+                <?php if (isset($_SESSION['login_error'])) : ?>
+                <p> <?php echo $_SESSION['login_error']; unset($_SESSION['login_error']) ?> </p>
                 <?php 
                 if(isset($_SESSION['message'])){
-                  echo "<p>" . $_SESSION['message'] . "</p>";
+                  echo "<p class='error'>" . $_SESSION['message'] . "</p>";
                   unset($_SESSION['message']);
               }
                 
                 ?>
               </div>
+              <?php endif; ?>
+              <div class="flex-col-c p-t-170 p-b-40">
+                <span class="txt1 p-b-9"> Don’t have an account? </span>
+
+                <a href="sign-in-page.php" class="txt3"> Sign up now </a>
+              </div>
+              
+               
+            
             </form>
           </div>
         </div>
