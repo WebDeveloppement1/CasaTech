@@ -1,36 +1,25 @@
-<?php 
+<?php
 include 'CoonectDb.php';
+// Prepare and bind the SQL statement
+$stmt = $connection->prepare("INSERT INTO contact (username, email, tel, message) VALUES (?, ?, ?, ?)");
+$stmt->bind_param("ssss", $username, $email, $tel, $message);
 
-// Assuming you have already established a database connection
-
-// Get the values from the form
-$username = $_POST['username'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
-
-// Prepare the SQL statement
-$sql = "INSERT INTO contact (username, email, phone, message) VALUES (?, ?, ?, ?)";
-
-// Prepare the statement
-$stmt = $connexion->prepare($sql);
-
-// Bind the parameters
-$stmt->bind_param("ssss", $username, $email, $phone, $message);
+// Set the values for the parameters
+// Get the username from the front end
+$username = $_POST["username"];
+$email = $_POST["email"];
+$tel = $_POST["phone"];
+$message = $_POST["message"];
 
 // Execute the statement
-$stmt->execute();
-
-// Check if the insertion was successful
-if ($stmt->affected_rows > 0) {
+if ($stmt->execute()) {
     header("Location: ../front-end/index.php");
+    exit();
 } else {
-    echo "Failed to insert data.";
+    header("Location: ../front-end/contact.php");
 }
 
-// Close the statement and the database connection
+// Close the statement and connection
 $stmt->close();
-$connexion->close();
-
-
+$connection->close();
 ?>

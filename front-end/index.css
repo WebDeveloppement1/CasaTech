@@ -66,12 +66,14 @@ body {
   padding-right: 10px;
 }
 .wrapperCenter {
+  margin-top: 2rem;
   width: 360px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
+  width: 100%;
 }
 
 .TextAcc {

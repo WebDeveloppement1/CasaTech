@@ -61,19 +61,27 @@ session_start();
               <div class="error_log">
                 <?php if (isset($_SESSION['login_error'])) : ?>
                 <p> <?php echo $_SESSION['login_error']; unset($_SESSION['login_error']) ?> </p>
-                <?php 
-                if(isset($_SESSION['message'])){
-                  echo "<p class='error'>" . $_SESSION['message'] . "</p>";
-                  unset($_SESSION['message']);
-              }
+                <?php endif; ?>
+                <?php if (isset($_SESSION['message'])) : ?>
+                <p> <?php echo $_SESSION['message']; unset($_SESSION['message']) ?> </p>
+                <?php endif; ?>
                 
-                ?>
               </div>
-              <?php endif; ?>
+             
               <div class="flex-col-c p-t-170 p-b-40">
                 <span class="txt1 p-b-9"> Don’t have an account? </span>
+                <ul class="list-connecter">
+                   
+                  <div>
 
-                <a href="sign-in-page.php" class="txt3"> Sign up now </a>
+                        <a href="sign-in-page.php" class="txt3"> Sign up now  </a>  
+                        </div>
+                        <div>
+                        <a href="index.php">Home</a>
+                        </div>
+                  </div>
+                  
+                </ul>
               </div>
               
                

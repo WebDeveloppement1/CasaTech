@@ -1,8 +1,27 @@
+* {
+  list-style: none;
+  text-decoration: none;
+}
 body {
   background-image: linear-gradient(rgba(66, 78, 91, 0.5), hsla(0, 0%, 100%, 0)),
     url(https://www.tecnocasa.tn/img/home-hero/tn/tecnocasa/residential/mobile_4.jpg);
 }
 
+.list-connecter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  margin-top: 1rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.list-connecter a {
+  color: black;
+  font-size: 1.1rem;
+}
 .wrap-login100 {
   position: relative;
 
@@ -210,4 +229,8 @@ body {
 .err_signin {
   color: red;
   font-size: 1.2rem;
+}
+
+.pp {
+  border: 150px solid;
 }

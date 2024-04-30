@@ -14,6 +14,7 @@ session_start();
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> //to not redirect me to another page evaluer mon bien ala khater el anmiations 
   </head>
   <body>
     <header class="wrapper-header">
@@ -137,25 +138,24 @@ session_start();
         <div class="evaluation-section">
           <div class="evaluation-container">
             <div class="evaluation-form-container">
-              <form  onsubmit="return launch_toast()" >
+              <form action="http://127.0.0.1/edsa-casatech/back-end/evaluerbien.php" method="post" onsubmit="return launch_toast()" >
                 <div class="first-row-info">
                   <h1>Saisissez les informations de votre bien</h1>
-
                   <div class="wrap-sl-info-bien">
                     <div class="twofirst-select">
-                      <select id="vl" class="info-bien-sl" >
+                      <select id="vl" name="type" class="info-bien-sl" >
                         <option disabled selected hidden>vente ou louer</option>
                         <option value="vente">vente</option>
                         <option value="louer">louer</option>
                       </select>
-                      <select id="typol" class="sl-typologie">
+                      <select id="typol" name="typologie" class="sl-typologie">
                         <option disabled selected hidden>typologie</option>
                         <option value="villa">villa</option>
                         <option value="appartement">appartement</option>
                       </select>
                     </div>
                     <div class="sl-agence">
-                      <select id="agc" class="agence">
+                      <select id="agc" name="agence" class="agence">
                         <option disabled selected hidden >agence</option>
                         <option value="ain-zagh">agence ain zaghouan</option>
                         <option value="manar">agence manar</option>
@@ -169,7 +169,7 @@ session_start();
 
                   <div classe="">
                     <div class="inp-nom-prenom">
-                      <input type="text" id="nom"  class="nom" placeholder="nom" />
+                      <input type="text"  id="nom"  class="nom" placeholder="nom" />
                       <input type="text" id="prenom"  class="prenom" placeholder="prenom" />
                       <br />
                     </div>
@@ -178,12 +178,12 @@ session_start();
                       <input
                         type="email"
                         class="input"
-                        name="email"
+                        name="mail"
                         id="email"
                         placeholder="entrer votre e-mail"
                         required
                       />
-                      <input id="num" type="number"  placeholder=" + 216 " />
+                      <input id="num" type="number" name="tel"  placeholder=" + 216 " />
                     </div>
                   </div>
 
@@ -195,6 +195,7 @@ session_start();
                       placeholder="message"
                       id="ta"
                       class="message"
+                      name="message"
                       cols="30"
                       rows="10"
                     ></textarea>

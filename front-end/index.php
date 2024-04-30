@@ -339,30 +339,20 @@ session_start();
       </div>
     </div>
     <div class="col-md-12" id="myModal">
-      <form action="index.html" method="post" name="FormSign">
+      <form action="http://127.0.0.1/edsa-casatech/back-end/connexion.php" onsubmit="return validSignInIndex()" method="post" name="FormSign">
         <h1>Sign Up</h1>
         <span class="close">&times;</span>
         <fieldset>
           <legend><span class="number">1</span> Your Basic Info</legend>
           <label for="name">Name:</label>
-          <input type="text" id="name" name="user_name" />
+          <input type="text" id="name" name="username" />
           <label for="email">Email:</label>
-          <input type="email" id="mail" name="user_email" />
+          <input type="email" id="mail" name="email" />
           <label for="password">Password:</label>
-          <input type="password" id="password" name="user_password" />
-          <label>Age:</label>
-          <input
-            type="radio"
-            id="under_13"
-            value="under_13"
-            name="user_age"
-          /><label for="under_13" class="light">Under 13</label><br />
-          <input
-            type="radio"
-            id="over_13"
-            value="over_13"
-            name="user_age"
-          /><label for="over_13" class="light">Over 13</label>
+          <input type="password" id="password" name="password" />
+          <label for="tel">phone:</label>
+          <input type="number" id="tel" name="tel"  />
+          
         </fieldset>
         <button type="submit">Sign Up</button>
       </form>
@@ -491,24 +481,6 @@ session_start();
       </div>
     </footer>
   </body>
-  <script>
-    var modal = document.getElementById("myModal");
-    var btn = document.getElementById("signIn-show");
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function () {
-      // modal.style.display = "block";
-      modal.classList.add("show");
-    };
-    span.onclick = function () {
-      // modal.style.display = "none";
-      modal.classList.remove("show");
-    };
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        // modal.style.display = "none";
-        modal.classList.remove("show");
-      }
-    };
-  </script>
+  <script src="index.js"></script>
+   
 </html>
