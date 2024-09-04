@@ -62,19 +62,3 @@ function valid(input) {
   var regex = /^[a-zA-Z\s]*$/;
   return regex.test(input.value);
 }
-
-$(document).ready(function () {
-  $("form").on("submit", function (event) {
-    event.preventDefault();
-
-    $.ajax({
-      url: "evaluerbien.php",
-      type: "post",
-      data: $(this).serialize(),
-      success: function (response) {
-        // You can do something with the response here
-        console.log(response);
-      },
-    });
-  });
-});
